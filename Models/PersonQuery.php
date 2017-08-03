@@ -1,13 +1,14 @@
 <?php
+namespace Turbo\MoneyManager\Models;
 
-namespace app\models;
+use yii\db\ActiveQuery;
 
 /**
- * This is the ActiveQuery class for [[CreditCardTransaction]].
+ * This is the ActiveQuery class for [[Person]].
  *
- * @see CreditCardTransaction
+ * @see Person
  */
-class CreditCardTransactionQuery extends \yii\db\ActiveQuery
+class PersonQuery extends ActiveQuery
 {
     /*public function active()
     {
@@ -16,7 +17,7 @@ class CreditCardTransactionQuery extends \yii\db\ActiveQuery
 
     /**
      * @inheritdoc
-     * @return CreditCardTransaction[]|array
+     * @return Person[]|array
      */
     public function all($db = null)
     {
@@ -25,7 +26,7 @@ class CreditCardTransactionQuery extends \yii\db\ActiveQuery
 
     /**
      * @inheritdoc
-     * @return CreditCardTransaction|array|null
+     * @return Person|array|null
      */
     public function one($db = null)
     {

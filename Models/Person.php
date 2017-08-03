@@ -1,8 +1,8 @@
 <?php
-
-namespace app\models;
+namespace Turbo\MoneyManager\Models;
 
 use Yii;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "person".
@@ -13,7 +13,7 @@ use Yii;
  * @property DebtTransaction[] $debtTransactions
  * @property Transaction[] $transactions
  */
-class Person extends \yii\db\ActiveRecord
+class Person extends ActiveRecord
 {
     /**
      * @inheritdoc

@@ -1,6 +1,5 @@
 <?php
-
-namespace app\models;
+namespace Turbo\MoneyManager\Models;
 
 use Yii;
 use yii\base\Model;

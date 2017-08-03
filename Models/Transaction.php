@@ -1,9 +1,10 @@
 <?php
-
-namespace app\models;
+namespace Turbo\MoneyManager\Models;
 
 use app\components\helpers\DateTimeHelper;
+use Turbo\MoneyManger\Models\Account;
 use Yii;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "transaction".
@@ -27,7 +28,7 @@ use Yii;
  * @property User $user
  * @property TransactionImage[] $transactionImages
  */
-class Transaction extends \yii\db\ActiveRecord
+class Transaction extends ActiveRecord
 {
     /**
      * @var DateTimeHelper
