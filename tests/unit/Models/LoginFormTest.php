@@ -1,11 +1,10 @@
 <?php
+namespace Turbo\MoneyManager\Tests\Models;
 
-namespace tests\models;
+use Codeception\Test\Unit;
+use Turbo\MoneyManager\Models\LoginForm;
 
-use app\models\LoginForm;
-use Codeception\Specify;
-
-class LoginFormTest extends \Codeception\Test\Unit
+class LoginFormTest extends Unit
 {
     private $model;
 

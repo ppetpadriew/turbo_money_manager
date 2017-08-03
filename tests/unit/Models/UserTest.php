@@ -1,8 +1,10 @@
 <?php
-namespace tests\models;
-use app\models\User;
+namespace Turbo\MoneyManager\Tests\Models;
 
-class UserTest extends \Codeception\Test\Unit
+use Codeception\Test\Unit;
+use Turbo\MoneyManager\Models\User;
+
+class UserTest extends Unit
 {
     public function testFindUserById()
     {

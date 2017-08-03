@@ -1,14 +1,15 @@
 <?php
-use app\components\helpers\DateTimeHelper;
+namespace Turbo\MoneyManger\Tests\Helpers;
 
-class DateTimeHelperTest extends \Codeception\Test\Unit
+use Codeception\Test\Unit;
+use Turbo\MoneyManager\Helpers\DateTime;
+
+class DateTimeHelperTest extends Unit
 {
-
-
     public function testNow()
     {
         // It should get current date and uses `Y-m-d H:i:s` as default format
-        $dateTimeHelper = new DateTimeHelper();
+        $dateTimeHelper = new DateTime();
         $result = $dateTimeHelper->now();
 
         expect($result)->equals(date('Y-m-d H:i:s', time()));
@@ -22,7 +23,7 @@ class DateTimeHelperTest extends \Codeception\Test\Unit
     public function testFirstDateOfMonth()
     {
         // It should return first date of current month
-        $dateTimeHelper = new DateTimeHelper();
+        $dateTimeHelper = new DateTime();
         
         $result = $dateTimeHelper->firstDateOfMonth();
         
@@ -37,7 +38,7 @@ class DateTimeHelperTest extends \Codeception\Test\Unit
     public function testLastDateOfMonth()
     {
         // It should return last date of current month
-        $dateTimeHelper = new DateTimeHelper();
+        $dateTimeHelper = new DateTime();
         
         $result = $dateTimeHelper->lastDateOfMonth();
         

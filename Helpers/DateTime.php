@@ -1,7 +1,7 @@
 <?php
-namespace app\components\helpers;
+namespace Turbo\MoneyManager\Helpers;
 
-class DateTimeHelper extends \DateTime
+class DateTime extends \DateTime
 {
     public function now($format = 'Y-m-d H:i:s'): string
     {
