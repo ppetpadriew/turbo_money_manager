@@ -1,0 +1,377 @@
+html,
+body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.body-container {
+}
+h1.app-name {
+    font-weight: bold;
+    font-size: 4em;
+}
+.search {
+    border: 1px solid #e7e7e7;
+    border-radius: 4px;
+    box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.075);
+}
+.search input {
+    border: none;
+}
+.search .input-group-addon {
+    border:none;
+    background: none;
+}
+.side-nav {
+    list-style: none;
+    background: #158cba;
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    padding: 0px;
+}
+/* Center profile image */
+.side-nav .side-nav-item:first-child {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.side-nav .side-nav-item {
+    padding: 10px 30px 10px 30px;
+}
+.side-nav a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    transition: 0.3s;
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0);
+    display: block;
+}
+.side-nav a:hover, a:focus{
+    border-bottom: 1.5px solid rgba(255, 255, 255, 1);
+}
+.side-nav a .glyphicon{
+    margin-right: 32px;
+}
+.side-nav .side-nav-item .profile-image{
+    height: 200px;
+    width: 200px;
+}
+.side-nav-trigger-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 65px;
+    background: #fff;
+    z-index: 2;
+}
+.site-wrap {
+    min-width: 100%;
+    min-height: 100%;
+    position: relative;
+    top: 0;
+    bottom: 100%;
+    left: 0;
+    z-index: 1;
+    padding: 4em;
+    background: #fff;
+}
+.side-nav-trigger {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+.side-nav-trigger:checked + label {
+    left: 310px;
+}
+.side-nav-trigger:checked ~ .site-wrap {
+    left: 300px;
+}
+label[for="side-nav-trigger"] {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 2;
+    width: 30px;
+    height: 100%;
+    cursor: pointer;
+    background-size: contain;
+}
+.hamburger-icon {
+    fill: #158cba;
+}
+.side-nav-trigger + label, .site-wrap {
+    transition: left 0.2s;
+}
+
+.nav-bar-container {
+
+}
+.row-bot-buffer {
+    margin-bottom: 10px;
+}
+.total-summary {
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: 200%;
+    font-weight: bold;
+}
+.total-summary .total-item {
+    padding: 10px;
+    overflow: auto;
+}
+.total-summary .total-item div {
+    float:left;
+    display:block;
+    width: 200px;
+    text-align: right;
+}
+.total-summary .total-item div:first-child {
+    text-align: left;
+    border-right: 1px solid #ddd;
+}
+.total-summary .total-item.income div:last-child{
+    color: #28b62c;
+}
+.total-summary .total-item.expense div:last-child{
+    color: #de0c00;
+}
+.dashboard {
+    padding: 30px;
+}
+.dashboard-item {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+.dashboard-item .title {
+    border-bottom: 1px solid #ddd;
+    font-size: 150%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    background-color: #158cba;
+    color: #fff;
+}
+.dashboard-item .content {
+  padding: 30px;
+}
+.transaction-container {
+    padding: 10px;
+    background: #d4d8dd;
+}
+.transaction-container .transaction-item {
+    height: 80px;
+    background: #fff;
+    border-bottom: 1px solid #d4d8dd;
+    padding: 10px;
+}
+.transaction-container .transaction-item:first-child {
+    box-shadow: 0px 2px 5px #888888;
+    margin-bottom: 20px;
+}
+.transaction-container .transaction-item .date-container {
+    display: inline-block;
+    height: 100%;
+}
+.transaction-container .transaction-item .total-amount {
+    display: inline-block;
+    height: 100%;
+    font-size: 2em;
+    float:right;
+}
+.transaction-container .transaction-item .date-container .day {
+    font-size: 2em;
+    line-height: 1em;
+    display: inline-block;
+    vertical-align: top;
+}
+.transaction-container .transaction-item .date-container .date-detail {
+    margin-left: 10px;
+    font-size: 1.3em;
+    display: inline-block;
+}
+.transaction-container .transaction-item .icon {
+    line-height: 1em;
+    font-size: 4em;
+    display: inline-block;
+    vertical-align: top;
+    width: 60px;
+    text-align: center;
+}
+.transaction-container .transaction-item .detail {
+    margin-left: 10px;
+    display: inline-block;
+    font-size: 1.3em;
+    vertical-align: top;
+}
+.transaction-container .transaction-item .detail .note{
+    font-size: 0.8em;
+}
+.transaction-container .transaction-item .amount {
+    display: inline-block;
+    float: right;
+    font-size: 2em;
+}
+.transaction-container .transaction-item .amount {
+    display: inline-block;
+    float: right;
+    font-size: 2em;
+}
+.transaction-container .transaction-item .income {
+    color: #28b62c;
+}
+.transaction-container .transaction-item .expense {
+    color: #de0c00;
+}
+.transaction-container .transaction-item .expense:before {
+    content: '('
+}
+.transaction-container .transaction-item .expense:after {
+    content: ')'
+}
+
+.date-filter-btn-container {
+    height: 73px;
+}
+.date-range-container {
+    display: none;
+}
+
+/* Category Page*/
+.tile-item {
+    width: 270px;
+    height: 270px;
+    border: 1px solid black;
+}
+.tile-item .icon {
+    padding: 10px;
+}
+.tile-item .icon img{
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: auto;
+}
+.tile-item .title {
+    text-align: center;
+    padding: 7px;
+    font-size: 2em;
+    font-weight: bold;
+    border-top: 1px solid black;
+}
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
+
+.wrap > .container {
+    padding: 70px 15px 20px;
+}
+
+.footer {
+    height: 60px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+/* add sorting icons to gridview sort links */
+a.asc:after, a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+}
+
+a.asc:after {
+    content: /*"\e113"*/ "\e151";
+}
+
+a.desc:after {
+    content: /*"\e114"*/ "\e152";
+}
+
+.sort-numerical a.asc:after {
+    content: "\e153";
+}
+
+.sort-numerical a.desc:after {
+    content: "\e154";
+}
+
+.sort-ordinal a.asc:after {
+    content: "\e155";
+}
+
+.sort-ordinal a.desc:after {
+    content: "\e156";
+}
+
+.grid-view th {
+    white-space: nowrap;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+/* align the logout "link" (button in form) of the navbar */
+.nav li > form > button.logout {
+    padding: 15px;
+    border: none;
+}
+
+@media(max-width:767px) {
+    .nav li > form > button.logout {
+        display:block;
+        text-align: left;
+        width: 100%;
+        padding: 10px 15px;
+    }
+}
+
+.nav > li > form > button.logout:focus,
+.nav > li > form > button.logout:hover {
+    text-decoration: none;
+}
+
+.nav > li > form > button.logout:focus {
+    outline: none;
+}
