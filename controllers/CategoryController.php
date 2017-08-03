@@ -1,8 +1,9 @@
 <?php
+namespace Turbo\MoneyManager\Controllers;
 
-namespace app\controllers;
+use yii\web\Controller;
 
-class CategoryController extends \yii\web\Controller
+class CategoryController extends Controller
 {
 
     public function actionIndex()
