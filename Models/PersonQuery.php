@@ -1,8 +1,6 @@
 <?php
 namespace Turbo\MoneyManager\Models;
 
-use yii\db\ActiveQuery;
-
 /**
  * This is the ActiveQuery class for [[Person]].
  *

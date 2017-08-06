@@ -2,7 +2,6 @@
 namespace Turbo\MoneyManager\Models;
 
 use Yii;
-use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "person".
