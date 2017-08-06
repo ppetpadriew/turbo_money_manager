@@ -1,7 +1,8 @@
 <?php
 namespace Turbo\MoneyManager\Models;
 
-use app\components\helpers\DateTimeHelper;
+use app\models\TransactionQuery;
+use Turbo\MoneyManager\Helpers\DateTime;
 use Turbo\MoneyManger\Models\Account;
 use Yii;
 use yii\db\ActiveRecord;
@@ -31,9 +32,9 @@ use yii\db\ActiveRecord;
 class Transaction extends ActiveRecord
 {
     /**
-     * @var DateTimeHelper
+     * @var DateTime
      */
-    private $dateTimeHelper;
+    private $dateTime;
     /**
      * @inheritdoc
      */
@@ -139,9 +140,9 @@ class Transaction extends ActiveRecord
         return new TransactionQuery(get_called_class());
     }
 
-    public function setDateHelper(DateTime $dateTimeHelper)
+    public function setDateHelper(DateTime $dateTime)
     {
-        $this->dateTimeHelper = $dateTimeHelper;
+        $this->dateTime = $dateTime;
     }
 
     public function thisMonth()

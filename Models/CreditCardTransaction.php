@@ -3,7 +3,6 @@ namespace Turbo\MoneyManager\Models;
 
 use Turbo\MoneyManger\Models\Account;
 use Yii;
-use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "credit_card_transaction".

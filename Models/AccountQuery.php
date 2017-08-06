@@ -1,7 +1,6 @@
 <?php
-namespace Turbo\MoneyManger\Models;
+namespace Turbo\MoneyManager\Models;
 
-use yii\db\ActiveQuery;
 
 /**
  * This is the ActiveQuery class for [[Account]].

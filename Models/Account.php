@@ -1,11 +1,11 @@
 <?php
 namespace Turbo\MoneyManger\Models;
 
+use Turbo\MoneyManager\Models\ActiveRecord;
 use Turbo\MoneyManager\Models\CreditCardTransaction;
 use Turbo\MoneyManager\Models\Transaction;
 use Turbo\MoneyManager\Models\User;
 use Yii;
-use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "account".
