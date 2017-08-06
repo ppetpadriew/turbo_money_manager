@@ -48,5 +48,10 @@
                 "config/web.php"
             ]
         }
+    },
+    "autoload": {
+        "psr-4": {
+            "Turbo\\MoneyManager\\": "./"
+        }
     }
 }

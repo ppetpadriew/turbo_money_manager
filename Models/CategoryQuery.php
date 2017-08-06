@@ -1,13 +1,14 @@
 <?php
+namespace Turbo\MoneyManger\Models;
 
-namespace app\models;
+use yii\db\ActiveQuery;
 
 /**
- * This is the ActiveQuery class for [[Person]].
+ * This is the ActiveQuery class for [[Category]].
  *
- * @see Person
+ * @see Category
  */
-class PersonQuery extends \yii\db\ActiveQuery
+class CategoryQuery extends ActiveQuery
 {
     /*public function active()
     {
@@ -16,7 +17,7 @@ class PersonQuery extends \yii\db\ActiveQuery
 
     /**
      * @inheritdoc
-     * @return Person[]|array
+     * @return Category[]|array
      */
     public function all($db = null)
     {
@@ -25,7 +26,7 @@ class PersonQuery extends \yii\db\ActiveQuery
 
     /**
      * @inheritdoc
-     * @return Person|array|null
+     * @return Category|array|null
      */
     public function one($db = null)
     {

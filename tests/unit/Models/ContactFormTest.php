@@ -1,10 +1,10 @@
 <?php
+namespace Turbo\MoneyManager\Tests\Models;
 
-namespace tests\models;
+use Codeception\Test\Unit;
+use Turbo\MoneyManager\Models\ContactForm;
 
-use app\models\ContactForm;
-
-class ContactFormTest extends \Codeception\Test\Unit
+class ContactFormTest extends Unit
 {
     private $model;
     /**

@@ -9,6 +9,7 @@ $config = [
     'aliases' => $aliases,
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'controllerNamespace' => 'Turbo\MoneyManager\Controllers',
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
@@ -18,7 +19,7 @@ $config = [
             'class' => 'yii\caching\FileCache',
         ],
         'user' => [
-            'identityClass' => 'app\models\User',
+            'identityClass' => 'Turbo\MoneyManager\Models\User',
             'enableAutoLogin' => true,
         ],
         'errorHandler' => [

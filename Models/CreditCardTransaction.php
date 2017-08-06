@@ -1,8 +1,9 @@
 <?php
+namespace Turbo\MoneyManager\Models;
 
-namespace app\models;
-
+use Turbo\MoneyManger\Models\Account;
 use Yii;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "credit_card_transaction".
@@ -19,7 +20,7 @@ use Yii;
  * @property Account $account
  * @property Transaction[] $transactions
  */
-class CreditCardTransaction extends \yii\db\ActiveRecord
+class CreditCardTransaction extends ActiveRecord
 {
     /**
      * @inheritdoc

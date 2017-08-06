@@ -1,13 +1,14 @@
 <?php
+namespace Turbo\MoneyManager\Models;
 
-namespace app\models;
+use yii\db\ActiveQuery;
 
 /**
  * This is the ActiveQuery class for [[Transaction]].
  *
  * @see Transaction
  */
-class TransactionQuery extends \yii\db\ActiveQuery
+class TransactionQuery extends ActiveQuery
 {
     /*public function active()
     {
