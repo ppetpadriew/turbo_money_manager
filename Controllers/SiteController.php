@@ -3,6 +3,7 @@
 namespace Turbo\MoneyManager\Controllers;
 
 use Turbo\MoneyManager\Models\ContactForm;
+use Turbo\MoneyManager\Models\LoginForm;
 use Turbo\MoneyManager\Models\TransactionSearch;
 use Yii;
 use yii\filters\AccessControl;
