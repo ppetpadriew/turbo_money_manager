@@ -13,6 +13,14 @@ modules:
         Yii2:
             configFile: 'config/test.php'
             cleanup: true
+        Db:
+            dsn: 'mysql:host=localhost;dbname=codecept_test'
+            user: 'root'
+            password: ''
+            dump: 'tests/_data/dump.sql'
+            populate: true
+            cleanup: true
+            reconnect: true
 
 # To enable code coverage:
 #coverage:
