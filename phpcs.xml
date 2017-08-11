@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="Turbo Money Manager Default Style">
+    <rule ref="PSR2" />
+
+    <!-- Arrays -->
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
+    <rule ref="Squiz.Arrays.ArrayBracketSpacing"/>
+
+    <!-- By default we use single quote only. Double quotes come when a variable is inside -->
+    <rule ref="Squiz.Strings.DoubleQuoteUsage">
+        <exclude name="Squiz.Strings.DoubleQuoteUsage.ContainsVar"/>
+    </rule>
+
+    <file>./src/</file>
+    <file>./tests</file>
+</ruleset>
