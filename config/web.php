@@ -11,7 +11,6 @@ $config = [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'Turbo\MoneyManager\Controllers',
     'viewPath' => '@app/src/views',
-    'runtimePath' => '@app/src/runtime',
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
