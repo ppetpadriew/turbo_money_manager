@@ -8,8 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --config webpack.config.js --watch",
-    "build": "webpack web/js/index.js ./bundle.js"
+    "webpack-watch": "webpack --config webpack.config.js --watch"
   },
   "author": "",
   "license": "ISC",

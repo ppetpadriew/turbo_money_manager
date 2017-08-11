@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace app\assets;
+namespace Turbo\MoneyManager\Assets;
 
 use yii\web\AssetBundle;
 
@@ -15,8 +15,7 @@ use yii\web\AssetBundle;
  */
 class AppAsset extends AssetBundle
 {
-    public $basePath = '@webroot';
-    public $baseUrl = '@web';
+    public $sourcePath = '@webroot/src/static';
     public $css = [
         'css/bootswatch.css',
         'css/customized-bootswatch.css',
@@ -32,6 +31,6 @@ class AppAsset extends AssetBundle
     public $depends = [
 //        'yii\web\YiiAsset',
 //        'yii\bootstrap\BootstrapPluginAsset',
-        'app\assets\ChartJsAsset'
+        ChartJsAsset::class
     ];
 }

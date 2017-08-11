@@ -1,6 +1,6 @@
 <ul class="side-nav">
     <li class="side-nav-item">
-        <img class="profile-image" src="images/profile-image.png" alt="">
+        <img class="profile-image" src="public/images/profile-image.png" alt="">
     </li>
     <li class="side-nav-item"><a href="<?= Yii::$app->urlManager->createUrl(['/site/index']); ?>"><i class="glyphicon glyphicon-home"></i> Home</a></li>
     <li class="side-nav-item"><a href="<?= Yii::$app->urlManager->createUrl(['/category/index']); ?>"><i class="glyphicon glyphicon-th-list"></i> Category</a></li>

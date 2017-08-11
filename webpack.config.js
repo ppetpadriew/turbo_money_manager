@@ -1,8 +1,8 @@
 var config = {
-    entry: ["./web/js/pages/dashboard-page.js"],
+    entry: ["./src/static/js/pages/dashboard-page.js"],
     output: {
-        path: __dirname + "/web/js/",
-        filename: "bundle.js"
+        path: __dirname + "/public",
+        filename: "bundles.js"
     },
     module: {
         rules: [
@@ -18,6 +18,6 @@ var config = {
             }
         ]
     },
-    devtool: "source-map"
+    // devtool: "source-map"
 };
 module.exports = config;
