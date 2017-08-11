@@ -4,13 +4,14 @@ import DateFilterButton from "./DateFilterButton";
 
 class StandardDateFilterButton extends DateFilterButton {
 
-    constructor(id, dateRangeContainerId, callback) {
+    constructor(id, dateRangeContainerId, callback)
+    {
         super(id, dateRangeContainerId);
 
         const clickHandler = (e) => {
             $(this.dateRangeContainerId).hide();
 
-            if(callback){
+            if (callback) {
                 callback(e);
             }
         };

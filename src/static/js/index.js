@@ -3,7 +3,7 @@ import Button from "./components/buttons/Button";
 
 let button = new Button({
     id: "#btn",
-    clickHandler: function() {
+    clickHandler: function () {
         alert("Hello");
     }
 });

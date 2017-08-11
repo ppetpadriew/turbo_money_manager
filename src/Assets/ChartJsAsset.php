@@ -1,7 +1,6 @@
 <?php
 namespace Turbo\MoneyManager\Assets;
 
-
 use yii\web\AssetBundle;
 
 class ChartJsAsset extends AssetBundle

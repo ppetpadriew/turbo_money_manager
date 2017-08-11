@@ -1,5 +1,5 @@
-(function(){
-    var Button = function(config){
+(function () {
+    var Button = function (config) {
         var defaultConfig = {
             activeClass: "btn-primary",
             inactiveClass: "btn-default",
@@ -14,7 +14,7 @@
         this.inactiveClass = config.inactiveClass;
         this.clickHandler = config.clickHandler;
 
-        this.$elem.click((function(e){
+        this.$elem.click((function (e) {
             e.preventDefault();
             this.toggleStatus();
             this.clickHandler.bind(this)(e)
@@ -22,30 +22,30 @@
     };
     Button.prototype = {
         constructor: Button,
-        toggleStatus: function(){
+        toggleStatus: function () {
             if (this.status === "active") {
                 this.deactivate();
             } else {
                 this.activate();
             }
         },
-        activate: function(){
+        activate: function () {
             this.status = "active";
             this.$elem.removeClass(this.inactiveClass);
             this.$elem.addClass(this.activeClass);
         },
-        deactivate: function(){
+        deactivate: function () {
             this.status = "inactive";
             this.$elem.removeClass(this.activeClass);
             this.$elem.addClass(this.inactiveClass);
         }
     };
 
-    var DateFilterButton = function(config){
+    var DateFilterButton = function (config) {
         this.dateRangeContainerId = config.dateRangeContainerId;
         this.buttonContainer = undefined;
         var clickHandler = config.clickHandler.bind(this);
-         config.clickHandler = function(){
+         config.clickHandler = function () {
              this.buttonContainer.setActiveButton(this.id);
              clickHandler();
          };
@@ -56,15 +56,15 @@
     DateFilterButton.prototype = Object.create(Button.prototype);
     DateFilterButton.constructor = oldDateFilterButtonConstructor;
 
-    var CustomDateFilterButton = function(config){
-        if(config.clickHandler){
+    var CustomDateFilterButton = function (config) {
+        if (config.clickHandler) {
             var clickHandler = config.clickHandler.bind(this);
         }
 
-        config.clickHandler = function(e){
+        config.clickHandler = function (e) {
             $(this.dateRangeContainerId).show();
 
-            if(clickHandler){
+            if (clickHandler) {
                 clickHandler(e);
             }
         };
@@ -75,14 +75,14 @@
     CustomDateFilterButton.prototype = Object.create(DateFilterButton.prototype);
     oldCustomDateFilterButtonConstructor.prototype.constructor = oldCustomDateFilterButtonConstructor;
 
-    var StandardDateFilterButton = function(config){
-        if(config.clickHandler){
+    var StandardDateFilterButton = function (config) {
+        if (config.clickHandler) {
             var clickHandler = config.clickHandler.bind(this);
         }
-        config.clickHandler = function(e){
+        config.clickHandler = function (e) {
             $(this.dateRangeContainerId).hide();
 
-            if(clickHandler){
+            if (clickHandler) {
                 clickHandler(e);
             }
         };
@@ -92,19 +92,19 @@
     StandardDateFilterButton.prototype = Object.create(DateFilterButton.prototype);
     StandardDateFilterButton.prototype.constructor = oldStandardDateFilterButtonConstructor;
 
-    var ButtonContainer = function(){
+    var ButtonContainer = function () {
         this.buttons = {};
         this.activeButton = undefined;
     };
     ButtonContainer.prototype = {
         constructor: ButtonContainer,
-        addButton: function(button){
+        addButton: function (button) {
             this.buttons[button.id] = button;
             button.buttonContainer = this;
         },
-        setActiveButton: function(buttonId){
+        setActiveButton: function (buttonId) {
             // Deactivate old one
-            if(this.activeButton) {
+            if (this.activeButton) {
                 this.activeButton.deactivate();
             }
 
@@ -115,12 +115,12 @@
     };
 
 
-    var Dashboard = function(){
+    var Dashboard = function () {
         this.bindEvents();
     };
     Dashboard.prototype = {
         constructor: Dashboard,
-        bindEvents: function(){
+        bindEvents: function () {
 
             var dateRangeContainerId = "#dateRangeContainer";
             var customBtn = new CustomDateFilterButton({id: "#customBtn", dateRangeContainerId: dateRangeContainerId});

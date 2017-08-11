@@ -3,16 +3,19 @@
 import Button from "./Button";
 
 class DateFilterButton extends Button {
-    constructor(id, dateRangeContainerId) {
+    constructor(id, dateRangeContainerId)
+    {
         super(id);
         this.dateRangeContainerId = dateRangeContainerId;
     }
 
-    setButtonContainer(buttonContainer) {
+    setButtonContainer(buttonContainer)
+    {
         this.buttonContainer = buttonContainer;
     }
 
-    click(callback) {
+    click(callback)
+    {
         const clickHandler = (e) => {
             this.buttonContainer.setActiveButton(this.id);
             callback(e);

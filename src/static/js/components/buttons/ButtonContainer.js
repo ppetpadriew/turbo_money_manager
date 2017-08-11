@@ -2,17 +2,20 @@
 
 class ButtonContainer {
 
-    constructor() {
+    constructor()
+    {
         this.buttons = {};
         this.activeButton = undefined;
     }
 
-    addButton(button) {
+    addButton(button)
+    {
         this.buttons[button.id] = button;
         button.setButtonContainer(this);
     }
 
-    setActiveButton(buttonId) {
+    setActiveButton(buttonId)
+    {
         // Deactivate old one
         if (this.activeButton) {
             this.activeButton.deactivate();

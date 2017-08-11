@@ -47,17 +47,17 @@ class TransactionSearch extends Transaction
              ->select('*')
              ->from('transaction t')
              ->innerJoin('category c');
-         if($this->note){
+        if ($this->note) {
             $query->where(['like', 't.note', $this->note]);
-         }
+        }
 
-         if($this->amount) {
-             $query->orWhere(['like', 't.amount', $this->amount]);
-         }
+        if ($this->amount) {
+            $query->orWhere(['like', 't.amount', $this->amount]);
+        }
 
-         if($this->category){
-             $query->orWhere(['like', 'c.category', $this->category]);
-         }
+        if ($this->category) {
+            $query->orWhere(['like', 'c.category', $this->category]);
+        }
          return $query->all();
     }
 }

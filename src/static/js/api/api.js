@@ -2,7 +2,8 @@
 import $ from "jquery";
 
 class Api {
-    get(url, callback) {
+    get(url, callback)
+    {
         return $.get(url, callback, 'json');
     }
 }
