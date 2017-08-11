@@ -10,10 +10,16 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'Turbo\MoneyManager\Controllers',
+    'viewPath' => '@app/src/views',
+    'runtimePath' => '@app/src/runtime',
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'NRVJrP-Nnn-A9ZHjq8RXBtD6LOaJ-VgP',
+        ],
+        'assetManager' => [
+            'basePath' => '@webroot/public/assets',
+            'baseUrl' => '@web/public/assets'
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
