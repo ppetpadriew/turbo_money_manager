@@ -24,7 +24,7 @@ services:
         MYSQL_ROOT_PASSWORD: root
 
   turbo-money-manager-php-fpm:
-    image: turbo-money-manager-php-fpm
+    image: turboranger/turbo-money-manager-php-fpm
     container_name: turbo-money-manager-php-fpm
     volumes:
       - ..:/var/www/project # root folder

@@ -1,0 +1,34 @@
+sudo: required
+
+cache:
+  directories:
+  - .composer/cache
+
+git:
+  depth: 1
+
+services:
+  - docker
+  - docker-compose
+  - git
+
+before_install:
+  - docker --version
+  - docker-compose --version
+  - chmod +x ./travis_install.sh
+
+install:
+  - travis_retry ./travis_install.sh
+
+script:
+  - docker exec -it logistics-php-fpm sh -c "vendor/bin/phpcs"
+  - docker exec -it logistics-php-fpm sh -c "vendor/bin/codecept run unit,integration --steps --coverage --coverage-xml"
+  - docker exec -it logistics-php-fpm sh -c "vendor/bin/codecept run acceptance --steps"
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+
+language: php
+php:
+  - '7.1'
+  - nightly
