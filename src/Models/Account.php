@@ -40,7 +40,13 @@ class Account extends ActiveRecord
             [['image_path'], 'string'],
             [['user_id'], 'integer'],
             [['name'], 'string', 'max' => 60],
-            [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_id' => 'id']],
+            [
+                ['user_id'],
+                'exist',
+                'skipOnError' => true,
+                'targetClass' => User::className(),
+                'targetAttribute' => ['user_id' => 'id']
+            ],
         ];
     }
 

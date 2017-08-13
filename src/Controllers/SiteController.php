@@ -10,7 +10,6 @@ use yii\filters\AccessControl;
 use yii\web\Response;
 use yii\filters\VerbFilter;
 
-
 class SiteController extends Controller
 {
     /**
@@ -138,7 +137,6 @@ class SiteController extends Controller
 
     public function actionAccountSummary()
     {
-
     }
 
     public function actionData()
@@ -153,11 +151,11 @@ class SiteController extends Controller
 
         $text = '';
         foreach ($rows as $row) {
-            $text .= "[<br>";
+            $text .= '[<br>';
             foreach ($row as $key => $value) {
                 $text .= "'{$key}' => '{$value}',<br>";
             }
-            $text .= "],<br>";
+            $text .= '],<br>';
         }
         echo $text;
     }

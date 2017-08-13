@@ -40,8 +40,20 @@ class CreditCardTransaction extends ActiveRecord
             [['amount'], 'number'],
             [['transaction_date', 'update_date'], 'safe'],
             [['user_id', 'account_id'], 'integer'],
-            [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_id' => 'id']],
-            [['account_id'], 'exist', 'skipOnError' => true, 'targetClass' => Account::className(), 'targetAttribute' => ['account_id' => 'id']],
+            [
+                ['user_id'],
+                'exist',
+                'skipOnError' => true,
+                'targetClass' => User::className(),
+                'targetAttribute' => ['user_id' => 'id']
+            ],
+            [
+                ['account_id'],
+                'exist',
+                'skipOnError' => true,
+                'targetClass' => Account::className(),
+                'targetAttribute' => ['account_id' => 'id']
+            ],
         ];
     }
 

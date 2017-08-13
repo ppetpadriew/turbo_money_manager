@@ -38,7 +38,13 @@ class Category extends ActiveRecord
             [['image'], 'string'],
             [['category'], 'string', 'max' => 40],
             [['icon'], 'string', 'max' => 20],
-            [['parent_id'], 'exist', 'skipOnError' => true, 'targetClass' => Category::className(), 'targetAttribute' => ['parent_id' => 'id']],
+            [
+                ['parent_id'],
+                'exist',
+                'skipOnError' => true,
+                'targetClass' => Category::className(),
+                'targetAttribute' => ['parent_id' => 'id']
+            ],
         ];
     }
 

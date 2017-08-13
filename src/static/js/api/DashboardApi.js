@@ -9,14 +9,15 @@ class DashboardApi {
      *  search
      * }
      */
-    getTransactions() {
-        api.get("index.php?r=site/transactions", function(res){
+    getTransactions()
+    {
+        api.get("index.php?r=site/transactions", function (res) {
             console.log(res);
-            if(res.success) {
+            if (res.success) {
                 console.log(res.data);
             }
         })
-            .fail(function(res){
+            .fail(function (res) {
                 console.log(res);
             });
     }

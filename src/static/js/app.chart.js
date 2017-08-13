@@ -1,4 +1,4 @@
-(function(){
+(function () {
     var expenseCtx = document.getElementById("expenseSummaryChart").getContext('2d');
     var expenseSummaryChart = new Chart(expenseCtx, {
         type: "doughnut",
@@ -47,3 +47,4 @@
         }
     });
 })();
+

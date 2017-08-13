@@ -1,5 +1,5 @@
 <?php
-namespace Turbo\MoneyManger\Tests\Helpers;
+namespace Turbo\MoneyManger\Tests\Unit\Helpers;
 
 use Codeception\Test\Unit;
 use Turbo\MoneyManager\Helpers\DateTime;

@@ -1,7 +1,6 @@
 <?php
 namespace Turbo\MoneyManager\Models;
 
-
 /**
  * This is the ActiveQuery class for [[CreditCardTransaction]].
  *

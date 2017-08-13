@@ -1,5 +1,5 @@
 <?php
-namespace Turbo\MoneyManager\Tests\Models;
+namespace Turbo\MoneyManager\Tests\Unit\Models;
 
 use Codeception\Test\Unit;
 use Turbo\MoneyManager\Models\LoginForm;
@@ -47,5 +47,4 @@ class LoginFormTest extends Unit
         expect_not(\Yii::$app->user->isGuest);
         expect($this->model->errors)->hasntKey('password');
     }
-
 }

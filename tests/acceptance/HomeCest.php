@@ -1,11 +1,14 @@
 <?php
+namespace Turbo\MoneyManger\Tests\Acceptance;
+
+use AcceptanceTester;
 use yii\helpers\Url as Url;
 
 class HomeCest
 {
     public function ensureThatHomePageWorks(AcceptanceTester $I)
     {
-        $I->amOnPage(Url::toRoute('/site/index'));        
+        $I->amOnPage(Url::toRoute('/site/index'));
         $I->see('My Company');
         
         $I->seeLink('About');

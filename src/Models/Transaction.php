@@ -55,11 +55,41 @@ class Transaction extends ActiveRecord
             [['amount'], 'number'],
             [['transaction_date', 'update_date'], 'safe'],
             [['note'], 'string', 'max' => 150],
-            [['account_id'], 'exist', 'skipOnError' => true, 'targetClass' => Account::className(), 'targetAttribute' => ['account_id' => 'id']],
-            [['category_id'], 'exist', 'skipOnError' => true, 'targetClass' => Category::className(), 'targetAttribute' => ['category_id' => 'id']],
-            [['credit_card_transaction_id'], 'exist', 'skipOnError' => true, 'targetClass' => CreditCardTransaction::className(), 'targetAttribute' => ['credit_card_transaction_id' => 'id']],
-            [['person_id'], 'exist', 'skipOnError' => true, 'targetClass' => Person::className(), 'targetAttribute' => ['person_id' => 'id']],
-            [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_id' => 'id']],
+            [
+                ['account_id'],
+                'exist',
+                'skipOnError' => true,
+                'targetClass' => Account::className(),
+                'targetAttribute' => ['account_id' => 'id']
+            ],
+            [
+                ['category_id'],
+                'exist',
+                'skipOnError' => true,
+                'targetClass' => Category::className(),
+                'targetAttribute' => ['category_id' => 'id']
+            ],
+            [
+                ['credit_card_transaction_id'],
+                'exist',
+                'skipOnError' => true,
+                'targetClass' => CreditCardTransaction::className(),
+                'targetAttribute' => ['credit_card_transaction_id' => 'id']
+            ],
+            [
+                ['person_id'],
+                'exist',
+                'skipOnError' => true,
+                'targetClass' => Person::className(),
+                'targetAttribute' => ['person_id' => 'id']
+            ],
+            [
+                ['user_id'],
+                'exist',
+                'skipOnError' => true,
+                'targetClass' => User::className(),
+                'targetAttribute' => ['user_id' => 'id']
+            ],
         ];
     }
 
@@ -150,7 +180,9 @@ class Transaction extends ActiveRecord
         $sql = "
             SELECT *
             FROM `transaction` t
-            WHERE t.transaction_date BETWEEN {$this->dateTimeHelper->firstDateOfMonth()} AND {$this->dateTimeHelper->lastDateOfMonth()}
+            WHERE t.transaction_date 
+              BETWEEN {$this->dateTimeHelper->firstDateOfMonth()} 
+              AND {$this->dateTimeHelper->lastDateOfMonth()}
             ORDER BY t.transaction_date
         ";
         $command = Yii::$app->db->createCommand($sql);
