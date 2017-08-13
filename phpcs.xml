@@ -22,6 +22,15 @@
         <exclude-pattern>./test/*</exclude-pattern>
     </rule>
 
+    <!-- Codeception has _before and _after methods -->
+    <rule ref="PSR2.Methods.MethodDeclaration.Underscore">
+        <exclude-pattern>./tests/*</exclude-pattern>
+    </rule>
+
     <file>./src/</file>
     <file>./tests</file>
+    <exclude-pattern>./tests/_support/*</exclude-pattern>
+    <exclude-pattern>./tests/_bootstrap.php</exclude-pattern>
+
+
 </ruleset>
