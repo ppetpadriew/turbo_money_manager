@@ -1,4 +1,6 @@
 <?php
+namespace Turbo\MoneyManger\Tests\Functional;
+
 class LoginFormCest
 {
     public function _before(\FunctionalTester $I)

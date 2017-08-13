@@ -1,5 +1,5 @@
 <?php
-namespace Turbo\MoneyManager\Tests\Models;
+namespace Turbo\MoneyManager\Tests\Unit\Models;
 
 use Codeception\Test\Unit;
 use Turbo\MoneyManager\Models\ContactForm;

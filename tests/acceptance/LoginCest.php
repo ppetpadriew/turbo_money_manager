@@ -1,4 +1,7 @@
 <?php
+namespace Turbo\MoneyManger\Tests\Acceptance;
+
+use AcceptanceTester;
 use yii\helpers\Url as Url;
 
 class LoginCest

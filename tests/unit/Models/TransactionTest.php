@@ -1,5 +1,5 @@
 <?php
-namespace Turbo\MoneyManager\Tests\Models;
+namespace Turbo\MoneyManager\Tests\Unit\Models;
 
 use app\tests\fixtures\TransactionFixture;
 use yii\codeception\DbTestCase;
