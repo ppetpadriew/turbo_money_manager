@@ -1,0 +1,52 @@
+version: '3'
+
+services:
+  turbo-money-manager-nginx:
+    image: nginx:alpine
+    container_name: turbo-money-manager-nginx
+    volumes:
+      - ./nginx:/etc/nginx/conf.d # sites-enabled
+      - ..:/var/www/project # root folder
+    ports:
+      - 40080:80
+    links:
+      - turbo-money-manager-php-fpm
+
+  turbo-money-manager-mysql-dev:
+      image: mysql:latest
+      container_name: turbo-money-manager-mysql-dev
+      ports:
+        - 43306:3306
+      volumes:
+        - ./mysql/data:/docker-entrypoint-initdb.d
+      environment:
+        MYSQL_DATABASE: turbo_money_manager
+        MYSQL_ROOT_PASSWORD: root
+
+  turbo-money-manager-php-fpm:
+    image: turbo-money-manager-php-fpm
+    container_name: turbo-money-manager-php-fpm
+    volumes:
+      - ..:/var/www/project # root folder
+      - ./php-fpm:/usr/local/etc/php/conf.d.user
+      - ../composer:/root/composer
+    links:
+      - turbo-money-manager-mysql-dev
+    environment:
+      IN_DOCKER: 1
+      COMPOSER_ALLOW_SUPERUSER: 1
+      COMPOSER_HOME: /root/composer
+      PHP_INI_SCAN_DIR: /usr/local/etc/php/conf.d:/usr/local/etc/php/conf.d.user
+
+  turbo-money-manager-pma:
+    image: phpmyadmin/phpmyadmin
+    container_name: turbo-money-manager-pma
+    links:
+      - turbo-money-manager-mysql-dev
+    ports:
+      - 48183:80
+    environment:
+      PMA_HOST: turbo-money-manager-mysql-dev
+      PMA_USER: root
+      PMA_PASSWORD: root
+      PMA_ARBITRARY: 1
