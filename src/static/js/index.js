@@ -8,3 +8,4 @@ let button = new Button({
     }
 });
 console.log(button);
+

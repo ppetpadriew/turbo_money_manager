@@ -31,6 +31,7 @@
     <file>./tests</file>
     <exclude-pattern>./tests/_support/*</exclude-pattern>
     <exclude-pattern>./tests/_bootstrap.php</exclude-pattern>
+    <exclude-pattern>./tests/_output/*</exclude-pattern>
 
 
 </ruleset>

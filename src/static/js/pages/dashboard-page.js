@@ -20,3 +20,4 @@ buttonContainer.setActiveButton(thisMonthBtn.id);
 
 const api = new DashboardApi();
 api.getTransactions();
+
