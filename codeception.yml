@@ -14,9 +14,9 @@ modules:
             configFile: 'config/test.php'
             cleanup: true
         Db:
-            dsn: 'mysql:host=localhost;dbname=codecept_test'
+            dsn: 'mysql:host=turbo-money-manager-mysql-dev;dbname=codecept_test'
             user: 'root'
-            password: ''
+            password: 'root'
             dump: 'tests/_data/dump.sql'
             populate: true
             cleanup: true

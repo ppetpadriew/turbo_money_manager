@@ -1,9 +1,10 @@
 <?php
-namespace app\tests\fixtures;
+namespace Turbo\MoneyManager\Tests\Fixtures;
 
+use Turbo\MoneyManager\Models\Transaction;
 use yii\test\ActiveFixture;
 
 class TransactionFixture extends ActiveFixture
 {
-    public $modelClass = 'app\models\Transaction';
+    public $modelClass = Transaction::class;
 }
