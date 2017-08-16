@@ -20,9 +20,9 @@ install:
   - travis_retry ./travis_install.sh
 
 script:
-  - docker exec -it logistics-php-fpm sh -c "vendor/bin/phpcs"
-  - docker exec -it logistics-php-fpm sh -c "vendor/bin/codecept run unit,integration --steps --coverage --coverage-xml"
-  - docker exec -it logistics-php-fpm sh -c "vendor/bin/codecept run acceptance --steps"
+  - docker exec -it turbo-money-manager-php-fpm sh -c "vendor/bin/phpcs"
+  - docker exec -it turbo-money-manager-php-fpm sh -c "vendor/bin/codecept run unit,integration --steps --coverage --coverage-xml"
+  - docker exec -it turbo-money-manager-php-fpm sh -c "vendor/bin/codecept run acceptance --steps"
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
