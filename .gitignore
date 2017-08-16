@@ -26,9 +26,10 @@ phpunit.phar
 # local phpunit config
 /phpunit.xml
 
-tests/_output/*
-tests/_support/_generated
+/tests/_output/*
+/tests/_support/_generated
 node_modules
 npm-debug.log.*
-public
-runtime
+/public
+/runtime
+/composer
