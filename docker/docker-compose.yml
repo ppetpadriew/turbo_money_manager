@@ -38,6 +38,10 @@ services:
       COMPOSER_HOME: /root/composer
       PHP_INI_SCAN_DIR: /usr/local/etc/php/conf.d:/usr/local/etc/php/conf.d.user
 
+  turbo-money-manager-selenium:
+    image: selenium/standalone-chrome:latest
+    container_name: turbo-money-manager-selenium
+
   turbo-money-manager-pma:
     image: phpmyadmin/phpmyadmin
     container_name: turbo-money-manager-pma
