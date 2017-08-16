@@ -25,7 +25,6 @@ script:
   - docker exec -it turbo-money-manager-php-fpm sh -c "vendor/bin/codecept run acceptance --steps"
 
 after_success:
-  - pwd
   - bash <(curl -s https://codecov.io/bash)
 
 language: php
