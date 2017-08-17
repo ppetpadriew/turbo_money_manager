@@ -29,14 +29,17 @@
         "codeception/base": "^2.2.3",
         "codeception/verify": "~0.3.1",
         "codeception/specify": "~0.4.3",
-        "squizlabs/php_codesniffer": "3.*"
+        "squizlabs/php_codesniffer": "3.*",
+        "facebook/webdriver": "^1.0.1"
     },
     "scripts": {
         "post-create-project-cmd": [
             "yii\\composer\\Installer::postCreateProject"
         ],
         "lint": "phpcs --standard=phpcs.xml -s",
-        "lint:fix": "phpcbf --standard=phpcs.xml"
+        "lint:fix": "phpcbf --standard=phpcs.xml",
+        "test:ui": "codecept run unit,integration",
+        "test:a": "codecept run acceptance"
     },
     "extra": {
         "yii\\composer\\Installer::postCreateProject": {
@@ -54,7 +57,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Turbo\\MoneyManager\\": "./src"
+            "Turbo\\MoneyManager\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Turbo\\MoneyManager\\Tests\\": "tests/"
         }
     }
 }

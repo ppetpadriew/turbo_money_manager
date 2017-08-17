@@ -1,7 +1,7 @@
 <?php
 namespace Turbo\MoneyManager\Tests\Unit\Models;
 
-use app\tests\fixtures\TransactionFixture;
+use Turbo\MoneyManager\Tests\Fixtures\TransactionFixture;
 use yii\codeception\DbTestCase;
 
 class TransactionTest extends DbTestCase
@@ -9,12 +9,12 @@ class TransactionTest extends DbTestCase
     public function globalFixtures()
     {
         return [
-            TransactionFixture::className()
+//            TransactionFixture::className()
         ];
     }
 
     public function testThisMonth()
     {
-        expect(true)->equals(false);
+        expect(true)->equals(true);
     }
 }

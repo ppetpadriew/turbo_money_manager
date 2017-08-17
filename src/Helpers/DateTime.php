@@ -11,7 +11,7 @@ class DateTime extends \DateTime
     public function firstDateOfMonth(string $month = null)
     {
         $month = $month ?? 'm';
-        return $this->now('Y-'.$month.'-d');
+        return $this->now('Y-'.$month.'-01');
     }
 
     public function lastDateOfMonth(string $month = null)

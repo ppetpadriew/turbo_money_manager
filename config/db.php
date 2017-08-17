@@ -2,8 +2,8 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=turbo_money_manager',
+    'dsn' => 'mysql:host=turbo-money-manager-mysql-dev;dbname=turbo_money_manager',
     'username' => 'root',
-    'password' => '',
+    'password' => 'root',
     'charset' => 'utf8',
 ];

@@ -14,32 +14,19 @@ modules:
             configFile: 'config/test.php'
             cleanup: true
         Db:
-            dsn: 'mysql:host=localhost;dbname=codecept_test'
+            dsn: 'mysql:host=turbo-money-manager-mysql-dev;dbname=codecept_test'
             user: 'root'
-            password: ''
+            password: 'root'
             dump: 'tests/_data/dump.sql'
             populate: true
             cleanup: true
             reconnect: true
 
-# To enable code coverage:
-#coverage:
-#    #c3_url: http://localhost:8080/index-test.php/
-#    enabled: true
-#    #remote: true
-#    #remote_config: '../codeception.yml'
-#    whitelist:
-#        include:
-#            - models/*
-#            - controllers/*
-#            - commands/*
-#            - mail/*
-#    blacklist:
-#        include:
-#            - assets/*
-#            - config/*
-#            - runtime/*
-#            - vendor/*
-#            - views/*
-#            - web/*
-#            - tests/*
+coverage:
+    enabled: true
+    include:
+      - src/*
+    exclude:
+      - src/views/*
+      - src/mail/*
+      - src/static/*

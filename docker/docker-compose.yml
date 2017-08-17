@@ -24,7 +24,7 @@ services:
         MYSQL_ROOT_PASSWORD: root
 
   turbo-money-manager-php-fpm:
-    image: turbo-money-manager-php-fpm
+    image: turboranger/php-fpm
     container_name: turbo-money-manager-php-fpm
     volumes:
       - ..:/var/www/project # root folder
@@ -37,6 +37,10 @@ services:
       COMPOSER_ALLOW_SUPERUSER: 1
       COMPOSER_HOME: /root/composer
       PHP_INI_SCAN_DIR: /usr/local/etc/php/conf.d:/usr/local/etc/php/conf.d.user
+
+  turbo-money-manager-selenium:
+    image: selenium/standalone-chrome:latest
+    container_name: turbo-money-manager-selenium
 
   turbo-money-manager-pma:
     image: phpmyadmin/phpmyadmin
